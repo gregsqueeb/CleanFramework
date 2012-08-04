@@ -1,0 +1,66 @@
+$gridWidth: 960px;
+
+* { 
+     -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  /* The *behavior is a IE hack for IE6/7 */
+          box-sizing: border-box; *behavior: url(/scripts/boxsizing.htc); 
+}
+body{
+	font-family: helvetica, sans-serif;
+}
+.logo{
+	float: left;
+}
+.pageWidthContainer{
+  margin: 0 auto;
+  overflow: hidden;
+	width: $gridWidth;
+}
+.navigation{
+  float: right;
+}
+.threeColumn{
+  float: left;
+  width: $gridWidth/3;
+}
+.fourColumn{
+  float: left;
+  width: 25%;
+}
+.leftColumn{
+  float: left;
+  width: 62.5%;
+}
+.rightColumn{
+  float: left;
+  width: 37.5%;
+}
+
+/* Media Queries */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px)
+{
+  .pageWidthContainer{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 960px)
+{
+  .pageWidthContainer{
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+  }
+}
+@media all and (max-width: 1440px) and (min-width: 960px)
+{ 
+}
+@media all and (min-width: 1440px)
+{ 
+}
+
+/* End Media Queries */
