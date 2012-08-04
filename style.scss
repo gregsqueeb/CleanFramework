@@ -1,43 +1,90 @@
-$gridWidth: 960px;
+@import 'globalVariables';
 
-* { 
+*{ 
      -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   /* The *behavior is a IE hack for IE6/7 */
           box-sizing: border-box; *behavior: url(/scripts/boxsizing.htc); 
+  margin: 0;
 }
-body{
-	font-family: helvetica, sans-serif;
-}
-.logo{
-	float: left;
-}
+
+// Grid Elements
+
 .pageWidthContainer{
   margin: 0 auto;
   overflow: hidden;
-	width: $gridWidth;
+  width: $gridWidth;
 }
-.navigation{
-  float: right;
+.twoColumn{
+  float: left;
+  padding: 0 24px 24px 0;
+  width: $gridWidth/2;
 }
 .threeColumn{
   float: left;
+  padding: 0 24px 24px 0;
   width: $gridWidth/3;
 }
 .fourColumn{
   float: left;
+  padding: 0 24px 24px 0;
   width: 25%;
+}
+.twoColumn:last-child,
+.threeColumn:last-child, 
+.fourColumn:last-child{
+  padding: 0 0 24px 0;
 }
 .leftColumn{
   float: left;
+  padding: 0 24px 24px 0;
   width: 62.5%;
 }
 .rightColumn{
   float: left;
+  padding: 0 0 24px 0;
   width: 37.5%;
 }
 
-/* Media Queries */
+// End Grid elements
+
+// Content Elements
+
+header{
+  height: 48px;
+  margin: 0 auto 24px;
+  width: $gridWidth;
+}
+.logo{
+  float: left;
+}
+.navigation{
+  float: right;
+}
+
+// End Content Elements
+
+// Typographic Elements
+a{
+  font-size: $textSize;
+}
+body{
+  font-family: $headerType;
+}
+h1{
+  font-size: $headerSize;
+  line-height: 100%;
+  margin: 0 0 24px;
+}
+p{
+  font-family: $textType;
+  font-size: $textSize;
+  line-height: 150%;
+}
+
+// Typographic Elements
+
+// Media Queries 
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px)
 {
@@ -63,4 +110,4 @@ body{
 { 
 }
 
-/* End Media Queries */
+// End Media Queries

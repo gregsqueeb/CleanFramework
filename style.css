@@ -3,39 +3,71 @@
   -webkit-box-sizing: border-box;
   /* The *behavior is a IE hack for IE6/7 */
   box-sizing: border-box;
-  *behavior: url(/scripts/boxsizing.htc); }
-
-body {
-  font-family: helvetica, sans-serif; }
-
-.logo {
-  float: left; }
+  *behavior: url(/scripts/boxsizing.htc);
+  margin: 0; }
 
 .pageWidthContainer {
   margin: 0 auto;
   overflow: hidden;
   width: 960px; }
 
-.navigation {
-  float: right; }
+.twoColumn {
+  float: left;
+  padding: 0 24px 24px 0;
+  width: 480px; }
 
 .threeColumn {
   float: left;
+  padding: 0 24px 24px 0;
   width: 320px; }
 
 .fourColumn {
   float: left;
+  padding: 0 24px 24px 0;
   width: 25%; }
+
+.twoColumn:last-child,
+.threeColumn:last-child,
+.fourColumn:last-child {
+  padding: 0 0 24px 0; }
 
 .leftColumn {
   float: left;
+  padding: 0 24px 24px 0;
   width: 62.5%; }
 
 .rightColumn {
   float: left;
+  padding: 0 0 24px 0;
   width: 37.5%; }
 
-/* Media Queries */
+header {
+  height: 48px;
+  margin: 0 auto 24px;
+  width: 960px; }
+
+.logo {
+  float: left; }
+
+.navigation {
+  float: right; }
+
+a {
+  font-size: 16px; }
+
+body {
+  font-family: "Helvetica", Sans-serif; }
+
+h1 {
+  font-size: 24px;
+  line-height: 100%;
+  margin: 0 0 24px; }
+
+p {
+  font-family: "Georgia", Serif;
+  font-size: 16px;
+  line-height: 150%; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .pageWidthContainer {
     margin: 0 auto;
@@ -46,4 +78,3 @@ body {
     margin: 0 auto;
     overflow: hidden;
     width: 100%; } }
-/* End Media Queries */
